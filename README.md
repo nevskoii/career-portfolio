@@ -22,12 +22,13 @@ assets/
     data-centre-control-mindmap-en.jpg
   downloads/
     Synthetic_Risk_Control_Matrix_V2_Detailed.xlsx
-    Aleksandr_Korshunov_Approved_CV_Public.pdf
+    CV_4_0-4.pdf
+    Aleksandr_Korshunov_Cover_Letter.pdf
 ```
 
-The public CV PDF is derived from the latest approved one-page Risk & Controls CV, with its embedded signed recommendation letter and file attachment annotation removed. The Excel workbook contains synthetic examples rather than employer data.
+The CV PDF is the user-provided, final `CV_4_0-4.pdf` uploaded **unchanged**. The cover letter is a separate general-purpose English letter for Risk & Controls / Risk Assurance. The Excel workbook contains synthetic examples rather than employer data.
 
-After these files are uploaded, the case-study images and Excel download display automatically, and the homepage/CV PDF download buttons become available.
+After these files are uploaded, the case-study images and Excel download display automatically, and the homepage/CV and cover-letter PDF download buttons become available.
 
 ## Data protection
 
