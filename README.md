@@ -1,53 +1,45 @@
-# Aleksandr Korshunov — Career Portfolio
+# Aleksandr Korshunov — Professional Portfolio
 
-[Open portfolio](https://nevskoii.github.io/career-portfolio/)
+[Open the portfolio](https://nevskoii.github.io/career-portfolio/)
 
-A compact, recruiter-oriented **single-page professional profile** with four linked areas of expertise and the full approved CV.
+Compact, recruiter-oriented portfolio with the complete CV on the main page and four dedicated areas of expertise.
 
-## Main page
+## Risk & Controls — published article
 
-- Profile, experience and contact details
-- Four expertise cards with a concise hover description and one **Read more** link each
-- Full CV text from the approved `CV_4_0-4.pdf`
-- Direct PDF downloads of the original CV and separate cover letter
-- Signed employer recommendation next to Rostelecom experience
+[Operational risk lives in business processes — so should the controls](https://nevskoii.github.io/career-portfolio/expertise/risk-controls/)
 
-## Expertise notes
+The article uses an answer-first structure: operational risk and accountability → business controls → data-centre technology/physical controls → relevant standards → detailed control anatomy → RCM as a governance instrument. It is framed using public McKinsey work on control frameworks and risk ownership, and official references including ISO 31000, ISO/IEC 27001, ISO 22301, ISO/IEC 20000-1 and Uptime Institute Tier Standards.
 
-Each area has its own professional notes page. Risk & Controls contains the full case study directly; additional projects and notes can be added to these area pages.
+Both original maps uploaded to GitHub are displayed in the article:
 
-| Area | Page |
-|---|---|
-| Risk & Controls | [Open](https://nevskoii.github.io/career-portfolio/expertise/risk-controls/) |
-| Audit & Assurance | [Open](https://nevskoii.github.io/career-portfolio/expertise/audit-assurance/) |
-| Financial Analysis & Modelling | [Open](https://nevskoii.github.io/career-portfolio/expertise/financial-analysis/) |
-| Data Analytics | [Open](https://nevskoii.github.io/career-portfolio/expertise/data-analytics/) |
+- `assets/business-control-mindmap-en.png`
+- `assets/data-centre-control-mindmap-en.jpg`
 
-The Risk & Controls case study is now integrated into [the Risk & Controls page](https://nevskoii.github.io/career-portfolio/expertise/risk-controls/) instead of being a separate project page. The old `/projects/risk-control-framework/` URL redirects to this page.
+The previous stand-alone project link redirects to the article within Risk & Controls.
 
-## PDF files (uploaded and linked)
+## Anonymised control register
 
-- `assets/CV_Aleksandr_Korshunov.pdf` — exact approved CV, direct download
-- `assets/Aleksandr_Korshunov_Cover_Letter.pdf` — cover letter, direct download
-- `assets/Recc_Letter_Aleksandr_Korshunov.pdf` — signed employer recommendation, direct download
+The article links to two Excel-compatible CSV documents:
 
-All three PDF files are present in the repository. The CV and cover letter match the original local files by Git blob SHA-1.
+- [27-column control procedures register](assets/Anonymised_Risk_Control_Matrix_Portfolio.csv) — six translated, anonymised and adapted example controls, preserving the core source register field order.
+- [11-column risk-to-control mapping](assets/Anonymised_Risk_Control_Mapping_Portfolio.csv) — maps six illustrative risks to those controls.
 
-## Control diagrams
+An additional `Anonymised_Risk_Control_Matrix_Portfolio.xlsx` workbook has been prepared in the working environment, containing a guide and both sheets. It is **not in the GitHub repository** yet.
 
-The Risk & Controls article is ready to show the two user's original maps directly below the introduction when these image files are added to the `main` branch:
+### Public disclosure precautions
 
-```
-assets/images/business-control-mindmap-en.PNG
-assets/images/data-centre-control-mindmap-en.jpg
-```
+The examples are **adapted illustrations, not verbatim reproductions of internal company procedures**. Actual names, company and vendor identifiers, system brands, control IDs, specific transactions, live operating-effectiveness results, deficiency assessments, remediation assignments and internal review correspondence have been omitted or generalised. No actual effectiveness of these sample controls is asserted.
 
-The two maps have not yet been uploaded to GitHub. The page detects image availability and hides unavailable images, so there are no broken previews. Source images are currently 1536×1024 pixels; a vector redraw is recommended for print-ready and zoomable typography. Both diagrams should preserve their existing control-category taxonomy and be proofread against the originals. The synthetic Excel RCM is not yet included.
+Descriptions are structured as: **owner → trigger → verification → pass → exception response → result → evidence (control trail)**.
 
-## Site architecture
+## CV and download assets
 
-Static HTML/CSS/JavaScript, no build step. GitHub Pages serves from the `main` branch root. Old URLs `/cv/`, `/about/`, `/projects/` and `/expertise/` redirect to the main portfolio rather than duplicating its content.
+The public portfolio has direct download links for the original files already uploaded:
 
-## Privacy
+- `assets/CV_Aleksandr_Korshunov.pdf`
+- `assets/Aleksandr_Korshunov_Cover_Letter.pdf`
+- `assets/Recc_Letter_Aleksandr_Korshunov.pdf`
 
-Public case studies summarise professional outcomes and use illustrative controls; they do not disclose confidential employer risk registers, client records or audit working papers.
+## Publication
+
+The website is static HTML/CSS and hosted by GitHub Pages from `main` / root.
