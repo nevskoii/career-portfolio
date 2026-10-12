@@ -1,41 +1,46 @@
-# Aleksandr Korshunov — Professional Portfolio
-
-A concise, one-page Australian recruiter-facing portfolio.
-
-## Main page
+# Aleksandr Korshunov — Career Portfolio
 
 [Open portfolio](https://nevskoii.github.io/career-portfolio/)
 
-- Four areas: Risk & Controls, Audit & Assurance, Financial Analysis & Modelling (including Financial Risk Modelling), Data Analytics.
-- Full approved CV text on the **same page**, sourced from `CV_4_0-4.pdf` (no shortened or alternative web CV).
-- Downloadable original CV, employer recommendation and separate cover letter.
-- Risk & Internal Control case study, original mind maps, synthetic Excel matrix and data centre monitoring dashboards.
-- Four dedicated area pages under `expertise/`.
+A compact, recruiter-oriented **single-page professional profile** with four linked areas of expertise and the full approved CV.
 
-The old `cv/` URL redirects to the main page’s `#cv` section.
+## Main page
 
-## Binary assets to upload
+- Profile, experience and contact details
+- Four expertise cards with a concise hover description and one **Read more** link each
+- Full CV text from the approved `CV_4_0-4.pdf`
+- Direct PDF downloads of the original CV and separate cover letter
+- Signed employer recommendation next to Rostelecom experience
 
-The GitHub connector can edit HTML/CSS and other UTF-8 text, but cannot transfer the local binary assets. The site is prepared to use these exact files once uploaded to `main`:
+## Expertise notes
 
-```
-assets/
-  downloads/
-    CV_4_0-4.pdf
-    RECOMMENDATION_LETTER.pdf
-    Aleksandr_Korshunov_Cover_Letter.pdf
-    Synthetic_Risk_Control_Matrix_V2_Detailed.xlsx
-  images/
-    business-control-mindmap-ru.jpg
-    data-centre-control-mindmap-en.jpg
-```
+Each area has its own page, structured as a professional notebook. New project notes can be added under **Notes & projects**.
 
-The original CV PDF and signed recommendation are preserved byte-for-byte. The recommendation is the signed letter issued on 24 September 2026 by the Head of Internal Control, JSC Data Storage Center. The Excel workbook is synthetic.
+| Area | Page |
+|---|---|
+| Risk & Controls | [Open](https://nevskoii.github.io/career-portfolio/expertise/risk-controls/) |
+| Audit & Assurance | [Open](https://nevskoii.github.io/career-portfolio/expertise/audit-assurance/) |
+| Financial Analysis & Modelling | [Open](https://nevskoii.github.io/career-portfolio/expertise/financial-analysis/) |
+| Data Analytics | [Open](https://nevskoii.github.io/career-portfolio/expertise/data-analytics/) |
 
-### Upload procedure
+The Risk & Controls area links to a detailed [case study](https://nevskoii.github.io/career-portfolio/projects/risk-control-framework/).
 
-Unzip `GitHub_Portfolio_Original_CV_Recommendation_Assets.zip`. Open the repository's `main` branch, then upload the six files to their matching folders under `assets/` (do not upload the ZIP itself). Once GitHub Pages deploys the files, the **Download CV (PDF)**, **Cover Letter (PDF)** and **Download recommendation (PDF)** buttons appear automatically. The original mind maps and Excel download also become available.
+## PDF files (uploaded and linked)
+
+- `assets/CV_Aleksandr_Korshunov.pdf` — exact approved CV, direct download
+- `assets/Aleksandr_Korshunov_Cover_Letter.pdf` — cover letter, direct download
+- `assets/Recc_Letter_Aleksandr_Korshunov.pdf` — signed employer recommendation, direct download
+
+All three PDF files are present in the repository. The CV and cover letter match the original local files by Git blob SHA-1.
+
+## Original maps and Excel matrix
+
+The original mind-map JPGs and synthetic Excel Risk & Control Matrix are **not yet uploaded** to the repository. No broken image links or nonfunctional Excel buttons are displayed. The case study currently contains the complete written methodology and findings; visual attachments can be added to it later.
+
+## Site architecture
+
+Static HTML/CSS/JavaScript, no build step. GitHub Pages serves from the `main` branch root. Old URLs `/cv/`, `/about/`, `/projects/` and `/expertise/` redirect to the main portfolio rather than duplicating its content.
 
 ## Privacy
 
-The public case study uses high-level professional outcomes and illustrative controls. No confidential risk registers, audit workpapers, customer data or incident logs are reproduced.
+Public case studies summarise professional outcomes and use illustrative controls; they do not disclose confidential employer risk registers, client records or audit working papers.
