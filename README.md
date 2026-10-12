@@ -1,39 +1,41 @@
 # Aleksandr Korshunov — Professional Portfolio
 
-Compact, recruiter-focused portfolio for Risk & Controls, Audit & Assurance, Financial Analysis & Modelling and Data Analytics.
+A concise, one-page Australian recruiter-facing portfolio.
 
-## Live pages
+## Main page
 
-- [Professional overview](https://nevskoii.github.io/career-portfolio/) — ~5 years of experience, expandable expertise cards and CV timeline.
-- [Full web CV](https://nevskoii.github.io/career-portfolio/cv/) — approved Risk & Controls content, web-readable.
-- [Expertise](https://nevskoii.github.io/career-portfolio/expertise/) — detailed experience and development directions.
-- [Projects](https://nevskoii.github.io/career-portfolio/projects/) — project index.
-- [Risk & Internal Control case study](https://nevskoii.github.io/career-portfolio/projects/risk-control-framework/) — challenge, methods, control areas, findings and conclusions.
-- [Data Centre Power & Sales Monitoring](https://nevskoii.github.io/monitoring_dashboards_dc/) — completed Plotly treemap project.
+[Open portfolio](https://nevskoii.github.io/career-portfolio/)
 
-## Binary assets
+- Four areas: Risk & Controls, Audit & Assurance, Financial Analysis & Modelling (including Financial Risk Modelling), Data Analytics.
+- Full approved CV text on the **same page**, sourced from `CV_4_0-4.pdf` (no shortened or alternative web CV).
+- Downloadable original CV, employer recommendation and separate cover letter.
+- Risk & Internal Control case study, original mind maps, synthetic Excel matrix and data centre monitoring dashboards.
+- Four dedicated area pages under `expertise/`.
 
-The HTML already references these exact paths. Upload the four supplied files, preserving their filenames and directories:
+The old `cv/` URL redirects to the main page’s `#cv` section.
+
+## Binary assets to upload
+
+The GitHub connector can edit HTML/CSS and other UTF-8 text, but cannot transfer the local binary assets. The site is prepared to use these exact files once uploaded to `main`:
 
 ```
 assets/
+  downloads/
+    CV_4_0-4.pdf
+    RECOMMENDATION_LETTER.pdf
+    Aleksandr_Korshunov_Cover_Letter.pdf
+    Synthetic_Risk_Control_Matrix_V2_Detailed.xlsx
   images/
     business-control-mindmap-ru.jpg
     data-centre-control-mindmap-en.jpg
-  downloads/
-    Synthetic_Risk_Control_Matrix_V2_Detailed.xlsx
-    CV_4_0-4.pdf
-    Aleksandr_Korshunov_Cover_Letter.pdf
 ```
 
-The CV PDF is the user-provided, final `CV_4_0-4.pdf` uploaded **unchanged**. The cover letter is a separate general-purpose English letter for Risk & Controls / Risk Assurance. The Excel workbook contains synthetic examples rather than employer data.
+The original CV PDF and signed recommendation are preserved byte-for-byte. The recommendation is the signed letter issued on 24 September 2026 by the Head of Internal Control, JSC Data Storage Center. The Excel workbook is synthetic.
 
-After these files are uploaded, the case-study images and Excel download display automatically, and the homepage/CV and cover-letter PDF download buttons become available.
+### Upload procedure
 
-## Data protection
+Unzip `GitHub_Portfolio_Original_CV_Recommendation_Assets.zip`. Open the repository's `main` branch, then upload the six files to their matching folders under `assets/` (do not upload the ZIP itself). Once GitHub Pages deploys the files, the **Download CV (PDF)**, **Cover Letter (PDF)** and **Download recommendation (PDF)** buttons appear automatically. The original mind maps and Excel download also become available.
 
-Professional outcomes are summarised at a high level. No confidential employer risk registers, audit working papers, personal records, customer data or internal incident logs are published.
+## Privacy
 
-## GitHub Pages
-
-Settings → Pages → Deploy from a branch → main / (root). The site uses plain HTML/CSS/JS, with no build step.
+The public case study uses high-level professional outcomes and illustrative controls. No confidential risk registers, audit workpapers, customer data or incident logs are reproduced.
