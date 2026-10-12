@@ -8,7 +8,7 @@ Compact, recruiter-oriented portfolio with the complete CV on the main page and 
 
 [Operational risk lives in business processes — so should the controls](https://nevskoii.github.io/career-portfolio/expertise/risk-controls/)
 
-The article uses an answer-first structure: operational risk and accountability → business controls → data-centre technology/physical controls → relevant standards → detailed control anatomy → RCM as a governance instrument. It is framed using public McKinsey work on control frameworks and risk ownership, and official references including ISO 31000, ISO/IEC 27001, ISO 22301, ISO/IEC 20000-1 and Uptime Institute Tier Standards.
+The article uses an answer-first structure: operational risk and accountability → business controls → data-centre technology/physical controls → relevant standards → detailed control anatomy → RCM as a governance instrument. 
 
 Both original maps uploaded to GitHub are displayed in the article:
 
