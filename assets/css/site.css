@@ -277,3 +277,122 @@ input,select{max-width:100%;font:inherit;padding:7px;border:1px solid var(--line
 .risk-references a:hover{text-decoration:underline}
 @media(max-width:800px){.control-logic{grid-template-columns:repeat(2,minmax(0,1fr))}.framework-grid{grid-template-columns:1fr}.matrix-download{align-items:flex-start;flex-direction:column}.matrix-download .button{white-space:normal}}
 @media(max-width:560px){.control-logic{grid-template-columns:1fr}.sample-body dl>div{grid-template-columns:1fr;gap:4px}.sample-body{padding:8px 14px}.sample-header{padding:15px 14px}.risk-map-feature figcaption{padding:10px 12px}.risk-story-section p{font-size:12px}.risk-article .pagehead h1{font-size:25px}}
+
+
+/* 2026-10 visual hierarchy refresh — consulting palette with clearer project surfaces */
+:root{
+  --risk-accent:#2d5f82;
+  --audit-accent:#2d746f;
+  --finance-accent:#665d89;
+  --data-accent:#347493;
+  --risk-surface:#f3f7fa;
+  --dashboard-accent:#26736f;
+  --dashboard-surface:#f1f8f7;
+}
+
+/* Expertise cards: distinct disciplines, still within one corporate palette */
+#areas .area-card:nth-child(1){--area-accent:var(--risk-accent);--area-surface:#f7fafc;--area-border:#bed0dd}
+#areas .area-card:nth-child(2){--area-accent:var(--audit-accent);--area-surface:#f6faf9;--area-border:#bdd7d3}
+#areas .area-card:nth-child(3){--area-accent:var(--finance-accent);--area-surface:#f9f8fb;--area-border:#d1cde0}
+#areas .area-card:nth-child(4){--area-accent:var(--data-accent);--area-surface:#f6f9fb;--area-border:#bfd3de}
+#areas .area-card{background:var(--area-surface);border-color:var(--area-border)}
+#areas .area-card::before{background:var(--area-accent);width:38px;height:4px}
+#areas .area-card:hover,#areas .area-card.is-open,#areas .area-card:focus-visible{border-color:var(--area-accent);box-shadow:0 9px 24px rgba(27,55,78,.10)}
+#areas .area-card:hover::before,#areas .area-card.is-open::before,#areas .area-card:focus-visible::before{background:var(--area-accent);width:58px}
+#areas .area-pop{background:var(--area-surface);border-color:var(--area-accent)}
+#areas .area-pop a{color:var(--area-accent)}
+
+/* Blog / notes pages: content blocks should read as independent records, not one long sheet */
+.notes-page .note-section{
+  background:#fff;
+  border:1px solid #d9e4eb;
+  border-radius:12px;
+  padding:22px 24px;
+  margin:16px 0;
+  box-shadow:0 4px 16px rgba(24,48,70,.04);
+}
+.notes-page .note-section:last-child{border-bottom:1px solid #d9e4eb}
+
+/* Risk & Controls index cards */
+#notes-index{background:transparent;border:0;padding:22px 0 10px;margin:0;box-shadow:none}
+#notes-index .note-link{position:relative;overflow:hidden;background:#fff;box-shadow:0 5px 18px rgba(25,51,73,.045)}
+#notes-index .note-link::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px}
+#notes-index .note-link:first-child::before{background:var(--risk-accent)}
+#notes-index .note-link:last-child::before{background:var(--dashboard-accent)}
+#notes-index .note-link:first-child:hover{border-color:#9fbcd0}
+#notes-index .note-link:last-child:hover{border-color:#9fc9c5}
+
+/* Each project is a self-contained surface */
+.project-shell{
+  position:relative;
+  padding:27px 28px 22px;
+  margin:22px 0 30px;
+  border:1px solid;
+  border-radius:15px;
+  box-shadow:0 10px 30px rgba(26,51,72,.06);
+  overflow:hidden;
+}
+.project-shell::before{
+  content:"";
+  position:absolute;
+  left:0;right:0;top:0;
+  height:4px;
+}
+.project-control{background:var(--risk-surface);border-color:#c8d9e5}
+.project-control::before{background:var(--risk-accent)}
+.project-dashboard{background:var(--dashboard-surface);border-color:#c4ddd9}
+.project-dashboard::before{background:var(--dashboard-accent)}
+.project-shell .risk-story-section{border-bottom:1px solid rgba(96,123,143,.17);padding:22px 0 18px}
+.project-shell .risk-story-section:first-child{padding-top:9px}
+.project-shell .risk-story-section:last-child{border-bottom:0;padding-bottom:2px}
+.project-control .article-eyebrow{color:var(--risk-accent)}
+.project-dashboard .article-eyebrow{color:var(--dashboard-accent)}
+.project-shell .risk-map-feature,
+.project-shell .sample-control,
+.project-shell .tablewrap,
+.project-shell .tile{box-shadow:0 3px 12px rgba(25,51,73,.045)}
+.project-control .framework-grid>div{border-left-color:#7195ad}
+.project-dashboard .framework-grid>div{border-left-color:#5b9994}
+.project-dashboard .tile:first-child{border-top:3px solid #376f96}
+.project-dashboard .tile:last-child{border-top:3px solid var(--dashboard-accent)}
+.project-dashboard .matrix-download{background:#e4f1ef;border-color:#afd1cd}
+.project-dashboard .matrix-download .button{background:#205f5c;border-color:#205f5c}
+.project-dashboard .matrix-download .button:hover{background:#184b49;border-color:#184b49}
+
+/* Outcome metrics: fast recruiter scan before the detail */
+.project-metrics{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:10px;
+  margin:13px 0 18px;
+}
+.project-metrics>div{
+  display:flex;
+  flex-direction:column;
+  gap:2px;
+  padding:11px 13px;
+  background:rgba(255,255,255,.86);
+  border:1px solid rgba(177,198,213,.72);
+  border-radius:8px;
+}
+.project-metrics b{font-size:19px;line-height:1.15;letter-spacing:-.35px}
+.project-metrics span{font-size:10.5px;color:#667c8c}
+.project-control .project-metrics b{color:var(--risk-accent)}
+.project-dashboard .project-metrics b{color:var(--dashboard-accent)}
+
+/* Closing takeaway: one deliberate high-contrast anchor */
+.closing-note{
+  background:#18364d;
+  border:1px solid #18364d!important;
+  border-radius:12px;
+  padding:21px 24px!important;
+  margin:27px 0 4px;
+}
+.closing-note h2{color:#fff!important;margin-bottom:8px!important}
+.closing-note p{color:#d6e3eb!important;max-width:900px}
+.closing-note p:last-child{margin-bottom:0}
+
+@media(max-width:700px){
+  .project-shell{padding:20px 18px 16px;margin-left:-2px;margin-right:-2px}
+  .project-metrics{grid-template-columns:1fr}
+}
