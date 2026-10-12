@@ -25,3 +25,22 @@
 .recommendation-row .ref-button:hover{background:#183c57}
 #cv{scroll-margin-top:67px}#cv .resume{max-width:none}#cv .resume h2{font-size:13px;margin:17px 0 8px}#cv .resume h3{font-size:13px}#cv .resume li{font-size:12px;line-height:1.48}
 @media(max-width:800px){.area-pop{position:static;border:0;border-top:1px solid #e1e9ee;box-shadow:none;padding:9px 0 0}.recommendation-row{flex-direction:column;align-items:flex-start}.section-heading-actions{align-items:flex-start}}
+
+
+/* Final, compact recruiter landing and Notion-style expertise notes */
+.intro{padding:22px 0 17px}.intro h1{font-size:25px}.intro p{margin-bottom:8px}
+#areas{padding-top:20px;padding-bottom:14px}#cv{padding-top:18px}
+.area-card{min-height:150px}.area-card h3{font-size:13px;margin-bottom:8px}.area-card p{font-size:12px;line-height:1.52}
+.area-trigger{margin-top:4px}
+.area-card:hover,.area-card.is-open{border-color:#96b4c9;box-shadow:0 2px 11px rgba(25,73,106,.09)}
+.area-pop{padding:12px 14px}.area-pop p{line-height:1.6;margin-bottom:10px}.area-pop a{display:inline-block;margin:0;color:#1c5a81}
+.section-heading-actions{margin-bottom:12px}.section-heading-actions .actions{gap:8px}
+.notes-page{max-width:920px}.notes-page .pagehead{padding-top:28px;padding-bottom:16px}
+.notes-page .pagehead h1{font-size:26px}.notes-page .pagehead p{font-size:13px}
+.note-section{padding:22px 0 6px;border-bottom:1px solid #e2e9ee}
+.note-section:last-child{border-bottom:0}.note-section h2{font-size:15px;margin-bottom:10px}
+.note-section p{font-size:13px;line-height:1.7;color:#536777;max-width:770px}
+.note-link{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:15px 17px;border:1px solid #dbe5ec;border-radius:7px;text-decoration:none;color:#254b68;transition:background .16s ease,border-color .16s ease}
+.note-link:hover{background:#f7fafc;border-color:#a4bfd1}.note-link strong{font-size:13px;display:block}.note-link small{font-size:11px;line-height:1.6;color:#677c8c;display:block;margin-top:4px}
+.note-entry{padding:11px 0 14px;border-bottom:1px solid #e4ebef;max-width:770px}.note-entry:last-child{border-bottom:0}.note-entry h3{font-size:13px;color:#254a65;margin:0 0 5px}.note-entry p{margin:0}
+@media(max-width:800px){.area-card{min-height:unset}.notes-page .pagehead h1{font-size:23px}}
