@@ -14,7 +14,7 @@ A compact, recruiter-oriented **single-page professional profile** with four lin
 
 ## Expertise notes
 
-Each area has its own page, structured as a professional notebook. New project notes can be added under **Notes & projects**.
+Each area has its own professional notes page. Risk & Controls contains the full case study directly; additional projects and notes can be added to these area pages.
 
 | Area | Page |
 |---|---|
@@ -23,7 +23,7 @@ Each area has its own page, structured as a professional notebook. New project n
 | Financial Analysis & Modelling | [Open](https://nevskoii.github.io/career-portfolio/expertise/financial-analysis/) |
 | Data Analytics | [Open](https://nevskoii.github.io/career-portfolio/expertise/data-analytics/) |
 
-The Risk & Controls area links to a detailed [case study](https://nevskoii.github.io/career-portfolio/projects/risk-control-framework/).
+The Risk & Controls case study is now integrated into [the Risk & Controls page](https://nevskoii.github.io/career-portfolio/expertise/risk-controls/) instead of being a separate project page. The old `/projects/risk-control-framework/` URL redirects to this page.
 
 ## PDF files (uploaded and linked)
 
@@ -33,9 +33,16 @@ The Risk & Controls area links to a detailed [case study](https://nevskoii.githu
 
 All three PDF files are present in the repository. The CV and cover letter match the original local files by Git blob SHA-1.
 
-## Original maps and Excel matrix
+## Control diagrams
 
-The original mind-map JPGs and synthetic Excel Risk & Control Matrix are **not yet uploaded** to the repository. No broken image links or nonfunctional Excel buttons are displayed. The case study currently contains the complete written methodology and findings; visual attachments can be added to it later.
+The Risk & Controls article is ready to show the two user's original maps directly below the introduction when these image files are added to the `main` branch:
+
+```
+assets/images/business-control-mindmap-en.PNG
+assets/images/data-centre-control-mindmap-en.jpg
+```
+
+The two maps have not yet been uploaded to GitHub. The page detects image availability and hides unavailable images, so there are no broken previews. Source images are currently 1536×1024 pixels; a vector redraw is recommended for print-ready and zoomable typography. Both diagrams should preserve their existing control-category taxonomy and be proofread against the originals. The synthetic Excel RCM is not yet included.
 
 ## Site architecture
 
