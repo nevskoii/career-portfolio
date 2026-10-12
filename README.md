@@ -17,20 +17,16 @@ Both original maps uploaded to GitHub are displayed in the article:
 
 The previous stand-alone project link redirects to the article within Risk & Controls.
 
-## Anonymised control register
+## Control procedure examples
 
-The article links to two Excel-compatible CSV documents:
+The article includes two downloadable Excel-compatible CSV resources:
 
-- [27-column control procedures register](assets/Anonymised_Risk_Control_Matrix_Portfolio.csv) — six translated, anonymised and adapted example controls, preserving the core source register field order.
-- [11-column risk-to-control mapping](assets/Anonymised_Risk_Control_Mapping_Portfolio.csv) — maps six illustrative risks to those controls.
+- [Detailed control procedures — 27 fields](assets/Control_Procedure_Examples.csv): six examples covering procurement, supplier monitoring, bank reconciliation, revenue, inventory and financial close.
+- [Risk-to-control mapping — 11 fields](assets/Risk_Control_Mapping_Examples.csv): connects the six process risks to their corresponding control procedures.
 
-An additional `Anonymised_Risk_Control_Matrix_Portfolio.xlsx` workbook has been prepared in the working environment, containing a guide and both sheets. It is **not in the GitHub repository** yet.
+Each control description follows a practical execution sequence: **who → when → what is checked → what happens if it passes → how exceptions are handled → the result → evidence of execution**.
 
-### Public disclosure precautions
-
-The examples are **adapted illustrations, not verbatim reproductions of internal company procedures**. Actual names, company and vendor identifiers, system brands, control IDs, specific transactions, live operating-effectiveness results, deficiency assessments, remediation assignments and internal review correspondence have been omitted or generalised. No actual effectiveness of these sample controls is asserted.
-
-Descriptions are structured as: **owner → trigger → verification → pass → exception response → result → evidence (control trail)**.
+The supporting files demonstrate how a Risk–Control Matrix can be structured, reviewed and used to track control design and execution.
 
 ## CV and download assets
 
