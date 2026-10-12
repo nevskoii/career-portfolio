@@ -1,24 +1,38 @@
 # Aleksandr Korshunov — Professional Portfolio
 
-Compact GitHub Pages portfolio for Australian recruiters and hiring managers.
+Compact, recruiter-focused portfolio for Risk & Controls, Audit & Assurance, Financial Analysis & Modelling and Data Analytics.
 
-## Pages
-- [Overview](https://nevskoii.github.io/career-portfolio/) — short profile, areas of expertise & development, metrics, selected work.
-- [Expertise](https://nevskoii.github.io/career-portfolio/expertise/) — Risk & Controls, Audit & Assurance, Financial Analysis & Modelling, Data Analytics, Financial Risk Modelling.
-- [Projects](https://nevskoii.github.io/career-portfolio/projects/) — current public demonstrations and planned work.
-- [Risk & Control Framework](https://nevskoii.github.io/career-portfolio/projects/risk-control-framework/) — interactive synthetic 12-risk/36-control matrix with CSV export and two lightweight zoomable SVG mind maps.
-- [Full CV](https://nevskoii.github.io/career-portfolio/cv/) — web-readable Risk & Controls CV, with browser Print / Save as PDF.
-- [About & Contact](https://nevskoii.github.io/career-portfolio/about/).
+## Live pages
 
-## Editorial approach
-Compact, factual, recruiter-oriented presentation. Published work is distinguished from planned projects and professional experience. No confidential employer registers, audit working papers, client details or incident records are uploaded.
+- [Professional overview](https://nevskoii.github.io/career-portfolio/) — ~5 years of experience, expandable expertise cards and CV timeline.
+- [Full web CV](https://nevskoii.github.io/career-portfolio/cv/) — approved Risk & Controls content, web-readable.
+- [Expertise](https://nevskoii.github.io/career-portfolio/expertise/) — detailed experience and development directions.
+- [Projects](https://nevskoii.github.io/career-portfolio/projects/) — project index.
+- [Risk & Internal Control case study](https://nevskoii.github.io/career-portfolio/projects/risk-control-framework/) — challenge, methods, control areas, findings and conclusions.
+- [Data Centre Power & Sales Monitoring](https://nevskoii.github.io/monitoring_dashboards_dc/) — completed Plotly treemap project.
 
-## Follow-up assets to add
-- Original high-resolution mind map images from the local portfolio package (current public SVGs are simplified web versions).
-- Original detailed synthetic Excel Risk & Control Matrix (current public version has a working CSV export, but does not reproduce the detailed workbook).
-- Final downloadable PDF of the approved CV without embedded signed reference-letter attachment.
+## Binary assets
 
-## Publishing
-GitHub Pages: Settings → Pages → Deploy from a branch → main / (root).
+The HTML already references these exact paths. Upload the four supplied files, preserving their filenames and directories:
 
-No build system or external dependencies are required.
+```
+assets/
+  images/
+    business-control-mindmap-ru.jpg
+    data-centre-control-mindmap-en.jpg
+  downloads/
+    Synthetic_Risk_Control_Matrix_V2_Detailed.xlsx
+    Aleksandr_Korshunov_Approved_CV_Public.pdf
+```
+
+The public CV PDF is derived from the latest approved one-page Risk & Controls CV, with its embedded signed recommendation letter and file attachment annotation removed. The Excel workbook contains synthetic examples rather than employer data.
+
+After these files are uploaded, the case-study images and Excel download display automatically, and the homepage/CV PDF download buttons become available.
+
+## Data protection
+
+Professional outcomes are summarised at a high level. No confidential employer risk registers, audit working papers, personal records, customer data or internal incident logs are published.
+
+## GitHub Pages
+
+Settings → Pages → Deploy from a branch → main / (root). The site uses plain HTML/CSS/JS, with no build step.
