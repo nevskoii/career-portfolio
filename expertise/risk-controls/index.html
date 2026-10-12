@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="Aleksandr Korshunov on operational risk, business and data-centre controls, and structuring an evidence-based Risk–Control Matrix.">
+<meta name="description" content="Risk & Controls project notes by Aleksandr Korshunov: internal control system design, risk-control mapping and management dashboards for data-centre operations.">
 <title>Risk & Controls | Aleksandr Korshunov</title>
 <link rel="stylesheet" href="../../assets/css/site.css">
 </head>
@@ -12,80 +12,75 @@
 <main class="wrap risk-article">
 <section class="pagehead">
   <div class="breadcrumb"><a href="../../">Overview</a> / <a href="../../#areas">Areas of expertise</a> / Risk &amp; Controls</div>
-  <div class="article-eyebrow">Risk management · Internal controls · Operational resilience</div>
-  <h1>Operational risk lives in business processes — so should the controls.</h1>
-  <p>From financial and commercial activities to the infrastructure behind a data centre, effective controls connect risks, accountable people, decisions and evidence.</p>
+  <div class="article-eyebrow">Project notes · Risk management · Internal controls</div>
+  <h1>Risk &amp; Controls project notes</h1>
+  <p>A small collection of work notes on risk-oriented internal control, data-centre operations and management dashboards as a control mechanism.</p>
   <div class="risk-article-meta"><span>Professional notes</span><span>Aleksandr Korshunov</span><span>Risk &amp; Controls</span></div>
 </section>
 
-<article class="risk-story">
-<div class="risk-opening">
-<p><strong>A risk register tells us what could go wrong. A well-designed control tells us what someone or something must do about it, when, how exceptions are handled, and how to prove it happened.</strong></p>
-<p>This is the distinction I find most important in risk and internal control work. Risks become manageable when they are connected to day-to-day processes rather than treated as a separate reporting exercise.</p>
-</div>
+<section class="section note-section" id="notes-index">
+  <h2>Notes &amp; projects</h2>
+  <div class="grid two">
+    <a class="note-link" href="#project-internal-control"><span><strong>01 / Creating an internal control system</strong><small>Risk-oriented control framework: business processes, risks, controls, ownership, evidence and RCM.</small></span><span aria-hidden="true">↓</span></a>
+    <a class="note-link" href="#project-dashboards"><span><strong>02 / Dashboards as a management control procedure</strong><small>STAR-style project note on Power BI / Plotly-style monitoring for power capacity and sales risk.</small></span><span aria-hidden="true">↓</span></a>
+  </div>
+</section>
 
-<section class="risk-story-section" id="business-control-map">
-<h2>01. Start with the business process</h2>
-<p>Almost every business process has a control dimension: procurement needs approval and supplier verification; finance needs reconciliations and reliable period-close procedures; sales needs pricing and billing checks; IT needs access and change management. A control system makes those expectations consistent, repeatable and testable.</p>
+<article class="risk-story">
+<section class="risk-story-section" id="project-internal-control">
+<div class="article-eyebrow">Project 01 · Internal control system</div>
+<h2>Creating an internal control system: from business process to control evidence</h2>
+<p><strong>The point of an internal control system is not to maintain a large register. It is to connect business objectives, process risks, control actions, accountable owners and evidence into one management system.</strong></p>
+<p>A risk-oriented approach starts with the process. Each process has a business objective, a set of risks that may prevent that objective from being achieved, and a set of controls that either prevent the risk, detect it after the event, or correct the consequences.</p>
+
 <figure class="risk-map-feature">
 <a href="../../assets/business-control-mindmap-en.png" target="_blank" rel="noopener" title="Open full-resolution business control map">
-<img src="../../assets/business-control-mindmap-en.png" alt="Ten business-control domains: document management, procurement, payroll, accounting close, fixed assets, sales, receivables, treasury, access management and risk compliance" width="1536" height="1024">
+<img src="../../assets/business-control-mindmap-en.png" alt="Business control procedures across document management, procurement, payroll, accounting close, fixed assets, revenue, receivables, treasury, access management and compliance" width="1536" height="1024">
 </a>
-<figcaption><strong>Figure 1 — Business control landscape.</strong> Ten practical process domains and examples of preventive, detective and corrective controls. <a href="../../assets/business-control-mindmap-en.png" target="_blank" rel="noopener">View full resolution ↗</a></figcaption>
+<figcaption><strong>Figure 1 — Business process control landscape.</strong> A high-level view of business processes, typical control objectives and examples of preventive, detective and corrective procedures. <a href="../../assets/business-control-mindmap-en.png" target="_blank" rel="noopener">View full resolution ↗</a></figcaption>
 </figure>
-<p>Operational risk is not necessarily technical: it can arise from poorly designed hand-offs, unclear responsibilities, incomplete records, inadequate approval limits or inconsistent execution. Financial consequences may include misstatements, leakage of revenue or unnecessary costs; nonfinancial consequences may include outages, service failures, contractual disputes or regulatory exposure.</p>
-<p>The principle of <strong>ownership</strong> is critical. Business teams execute first-line controls; risk and compliance functions provide frameworks, challenge and monitoring; internal audit offers independent assurance. McKinsey's discussion of operational risk management similarly emphasises consistent risk taxonomies, clearly defined ownership and connecting risk and control assessments to management decisions.<a class="inline-source" href="https://www.mckinsey.com/capabilities/risk-and-resilience/how-we-help-clients/operational-risk-compliance-and-controls" target="_blank" rel="noopener">Source ↗</a></p>
+
+<h3>How the risk-oriented logic works</h3>
+<p>The same structure can be applied to procurement, finance, revenue, treasury, fixed assets, IT access or risk governance:</p>
+<div class="control-logic">
+<div><span>01</span><strong>PROCESS</strong><small>What business activity creates value or exposure?</small></div>
+<div><span>02</span><strong>RISK</strong><small>What can go wrong and what would the consequence be?</small></div>
+<div><span>03</span><strong>CONTROL</strong><small>What prevents, detects or corrects the risk?</small></div>
+<div><span>04</span><strong>OWNER</strong><small>Who performs and who reviews the control?</small></div>
+<div><span>05</span><strong>EVIDENCE</strong><small>What record proves that the control operated?</small></div>
+<div><span>06</span><strong>FOLLOW-UP</strong><small>How are exceptions resolved and tracked?</small></div>
+</div>
+<p>This is where control design becomes more than a policy statement. A useful control description answers: who performs it, when it is triggered, what data is checked, what happens if the result is satisfactory, what happens if an exception is found, and what evidence remains.</p>
 </section>
 
-<section class="risk-story-section" id="data-centres">
-<h2>02. A data centre adds a tightly coupled technical environment</h2>
-<p>A data centre is both a business and a critical technology operation. Commercial decisions and financial records are connected to physical infrastructure: electrical capacity, UPS, generators, cooling, networking, hardware, security systems and specialist vendors.</p>
-<p>A failure in one area can propagate through others. An unapproved infrastructure change may affect availability; insufficient maintenance or poor monitoring may extend an incident; weak contract or capacity controls may create a mismatch between commitments and resources. That makes well-defined ownership, preventive checks, monitoring, incident escalation and recovery testing especially important.</p>
+<section class="risk-story-section" id="data-centre-control-system">
+<h2>Applying the same approach to data-centre operations</h2>
+<p>Data centres have a pronounced IT and infrastructure profile. Commercial commitments, availability, power capacity, cooling, physical security, access rights, incident management, maintenance and vendors all interact with each other. A failure in one area can quickly become a service, financial or contractual risk.</p>
+<p>That is why a data-centre control system needs both business controls and technical-operational controls. The business side covers approvals, contracts, billing, cost allocation and governance. The operational side covers infrastructure monitoring, change management, incident response, BCP/DRP, access, suppliers and compliance with internal and external requirements.</p>
+
 <figure class="risk-map-feature">
 <a href="../../assets/data-centre-control-mindmap-en.jpg" target="_blank" rel="noopener" title="Open full-resolution data-centre control map">
-<img src="../../assets/data-centre-control-mindmap-en.jpg" alt="Ten data-centre control domains: operations, construction and commissioning, physical security, incident management, IT systems, power and cooling, fire and environment, continuity, suppliers and governance" width="1536" height="1024" loading="lazy">
+<img src="../../assets/data-centre-control-mindmap-en.jpg" alt="Data centre control procedures across operations, construction, access, incidents, IT systems, power and cooling, fire safety, continuity, vendors and governance" width="1536" height="1024" loading="lazy">
 </a>
-<figcaption><strong>Figure 2 — Data centre control landscape.</strong> Operations, power and cooling, physical security, IT systems, incidents, third parties and business continuity. <a href="../../assets/data-centre-control-mindmap-en.jpg" target="_blank" rel="noopener">View full resolution ↗</a></figcaption>
+<figcaption><strong>Figure 2 — Data-centre control landscape.</strong> Examples of controls for a technical operating environment where availability, security, capacity and continuity are key control objectives. <a href="../../assets/data-centre-control-mindmap-en.jpg" target="_blank" rel="noopener">View full resolution ↗</a></figcaption>
 </figure>
-<h3>What frameworks apply?</h3>
-<p>There is no single standard that governs every data-centre control. The applicable obligations depend on the facility, jurisdiction, contracts, certifications and scope of services. Useful reference frameworks include:</p>
+
+<h3>Reference framework</h3>
+<p>The control environment can be mapped to several layers: enterprise risk management, information security, business continuity, IT service management, infrastructure standards, internal policies, SLAs and contract obligations. In practice, the task is to translate those requirements into operationally executable controls.</p>
 <div class="framework-grid">
-<div><strong>ISO 31000</strong><span>Risk management principles and guidelines; not a data-centre certification.</span></div>
-<div><strong>ISO/IEC 27001</strong><span>Information security management systems, including relevant technology and information risks.</span></div>
-<div><strong>ISO 22301</strong><span>Business continuity management, disruption response and recovery arrangements.</span></div>
-<div><strong>ISO/IEC 20000-1</strong><span>Service management systems and consistent delivery and improvement of services.</span></div>
-<div><strong>Uptime Institute Tier Standards</strong><span>Data-centre infrastructure topology and availability criteria; certification is a separate assessment.</span></div>
-<div><strong>Internal policies and contracts</strong><span>Operational procedures, SLAs, customer obligations, legal requirements and site-specific risk acceptance.</span></div>
+<div><strong>Risk governance</strong><span>Risk taxonomy, risk appetite, owners, KRIs, RCSA and management reporting.</span></div>
+<div><strong>Information security</strong><span>Access management, privileged accounts, logging, change control and segregation of duties.</span></div>
+<div><strong>Business continuity</strong><span>BCP/DRP, backup checks, recovery testing, incident escalation and lessons learned.</span></div>
+<div><strong>Service management</strong><span>SLA monitoring, incident and problem management, change windows and service reporting.</span></div>
+<div><strong>Infrastructure resilience</strong><span>Power, cooling, monitoring, redundancy, maintenance and capacity utilisation.</span></div>
+<div><strong>Contracts and finance</strong><span>Pricing, billing, cost allocation, counterparty terms, approvals and evidence retention.</span></div>
 </div>
-<p>These frameworks provide different lenses: risk governance, information security, continuity, service management and physical infrastructure resilience. They should not be described as universally mandatory or as proof that a particular site holds a certification.</p>
 </section>
 
-<section class="risk-story-section" id="control-design">
-<h2>03. Writing a control is harder than writing a policy</h2>
-<p>A vague requirement such as “the finance team reviews billing” is not a testable control. It leaves too many questions unanswered: Who performs the review? When? What is compared? What counts as a mismatch? Who corrects it? What record remains?</p>
-<p>I use the following practical structure to explain what a complete control description needs.</p>
-<div class="control-logic">
-<div><span>01</span><strong>WHO</strong><small>Named accountable role and performing role</small></div>
-<div><span>02</span><strong>WHEN</strong><small>Frequency, trigger and deadline</small></div>
-<div><span>03</span><strong>WHAT</strong><small>Data, criteria and actual verification steps</small></div>
-<div><span>04</span><strong>PASS</strong><small>What happens when the check is satisfactory</small></div>
-<div><span>05</span><strong>EXCEPTION</strong><small>Correction, escalation and revalidation</small></div>
-<div><span>06</span><strong>RESULT &amp; TRACE</strong><small>Output, evidence, reviewer and retention</small></div>
-</div>
-<p>This structure is also what allows a reviewer to distinguish <em>control design</em> from <em>operating effectiveness</em>. The first asks whether the prescribed procedure could mitigate the relevant risk; the second asks whether it was actually performed as designed.</p>
-</section>
-
-<section class="risk-story-section" id="my-work">
-<h2>04. What this looked like in practice</h2>
-<p>At Rostelecom (Data Centres), my work included developing an enterprise-wide risk and internal control framework spanning approximately <strong>90 risks and 250 controls</strong>, delivering <strong>10+ risk-based process reviews</strong>, working with process owners and tracking corrective actions.</p>
-<p>I looked for gaps between documented procedures and real transactions. For example, revenue assurance reviews identified discounts outside approved limits and unauthorised long-term capacity reservations. Contract-cost analysis identified pricing differences requiring further review. These matters were not simply register entries: they required evidence, discussions with responsible teams and practical follow-up.</p>
-<p>The aim was to make risks understandable to managers and translate review findings into specific control improvements.</p>
-</section>
-
-<section class="risk-story-section" id="matrix">
-<h2>05. The Risk–Control Matrix turns controls into a management system</h2>
-<p>A <strong>Risk–Control Matrix (RCM)</strong> connects a risk to the activities intended to mitigate it and to the evidence that those activities occurred. A useful register captures the risk, control objective, exact execution steps, frequency, owner, system dependence, control type, evidence, testing results and any remediation.</p>
-<p>The following example illustrates a complete control procedure: its objective, accountable roles, timing, verification steps, exception handling and supporting evidence.</p>
+<section class="risk-story-section" id="rcm">
+<h2>Risk–Control Matrix as the operating layer</h2>
+<p>A Risk–Control Matrix turns the framework into a working management tool. It links each risk to a control objective, the exact execution procedure, accountable roles, frequency, system dependence, evidence, testing results and remediation actions.</p>
+<p>The example below shows the level of detail expected from a complete control. It is intentionally written as an operational algorithm rather than a generic policy line.</p>
 
 <div class="sample-control">
 <div class="sample-header"><span class="sample-label">Detailed control example · EX-CP-004</span><h3>Monthly reconciliation of billing data to the financial ledger</h3><p><strong>Risk:</strong> billing data may be omitted, duplicated or inaccurately reflected in accounting records.</p></div>
@@ -102,9 +97,9 @@
 </div>
 </div>
 
-<h3>Six control examples across business processes</h3>
+<h3>Examples of controls inside an RCM</h3>
 <div class="tablewrap matrix-preview"><table>
-<thead><tr><th>ID</th><th>Process</th><th>Illustrative control</th><th>Type</th><th>Key evidence</th></tr></thead>
+<thead><tr><th>ID</th><th>Process</th><th>Control</th><th>Type</th><th>Evidence</th></tr></thead>
 <tbody>
 <tr><td>EX-CP-001</td><td>Procurement</td><td>Reconcile the approved plan with transaction records</td><td>Detective</td><td>Updated approved plan and change log</td></tr>
 <tr><td>EX-CP-002</td><td>Third-party risk</td><td>Monitor active suppliers for material adverse events</td><td>Detective</td><td>Screening results and escalation log</td></tr>
@@ -113,29 +108,60 @@
 <tr><td>EX-CP-005</td><td>Inventory</td><td>Reconcile warehouse and accounting records</td><td>Detective</td><td>Variance report and approved corrections</td></tr>
 <tr><td>EX-CP-006</td><td>Financial close</td><td>Prevent unauthorised posting to closed periods</td><td>Preventive</td><td>ERP configuration, log and exception approval</td></tr>
 </tbody></table></div>
-<div class="matrix-download" id="matrix-excel-download" hidden><div><strong>Risk–Control Matrix — Excel workbook</strong><p>Six detailed control procedures across 27 fields, including execution steps, responsibilities, evidence, assessments and follow-up.</p></div><a class="button primary" href="../../assets/Control_Procedure_Examples.xlsx" download>↓ Download Risk–Control Matrix (.xlsx)</a></div>
-
+<div class="matrix-download" id="matrix-excel-download" hidden><div><strong>Risk–Control Matrix — Excel workbook</strong><p>Detailed control examples across structured fields: risk, control design, owner, frequency, evidence, assessment and follow-up.</p></div><a class="button primary" href="../../assets/Control_Procedure_Examples.xlsx" download>↓ Download Risk–Control Matrix (.xlsx)</a></div>
 </section>
 
-<section class="risk-story-section" id="conclusion">
-<h2>06. The point is not to have more controls. It is to have better ones.</h2>
-<p>Good controls have a clear purpose, are proportionate to the risk, fit naturally into operations and leave enough evidence to be assessed. In a data centre, that means viewing operational and technology risks together with financial and commercial controls — without losing clear accountability for each process.</p>
-<p>For me, the RCM is not a compliance spreadsheet in isolation. It is the link between risk ownership, daily work, management oversight and assurance.</p>
+<section class="risk-story-section" id="project-dashboards">
+<div class="article-eyebrow">Project 02 · Management control dashboards</div>
+<h2>Dashboards as a control procedure: strengthening management control in business processes</h2>
+<p><strong>A dashboard can be more than reporting. When it has defined thresholds, owners, review cadence and escalation logic, it becomes a detective control that supports management oversight.</strong></p>
+<p>This project translates operational and commercial capacity data into interactive monitoring views for data-centre power consumption and colocation sales risk.</p>
+
+<div class="grid two">
+  <article class="tile"><h3>Power consumption monitoring</h3><p>Actual power load versus projected capacity. The treemap highlights high-load halls, spare capacity and areas requiring operational attention.</p><a href="https://nevskoii.github.io/monitoring_dashboards_dc/heatmap_consumption.html" target="_blank" rel="noopener">Open power treemap ↗</a></article>
+  <article class="tile"><h3>Colocation sales risk monitoring</h3><p>Sold power commitments relative to capacity. The view helps identify overselling, underutilised commercial inventory and locations requiring review.</p><a href="https://nevskoii.github.io/monitoring_dashboards_dc/heatmap_sales.html" target="_blank" rel="noopener">Open sales treemap ↗</a></article>
+</div>
+
+<h3>STAR summary</h3>
+<div class="tablewrap"><table>
+<thead><tr><th>Element</th><th>Description</th></tr></thead>
+<tbody>
+<tr><td><strong>Situation</strong></td><td>Data-centre capacity and sales information can be difficult to control when it is reviewed through static extracts or disconnected reports. Management needs visibility from portfolio level down to individual server halls.</td></tr>
+<tr><td><strong>Task</strong></td><td>Create an analytical monitoring tool that helps compare available capacity, actual power load and sold commitments, and highlights where business review is required.</td></tr>
+<tr><td><strong>Action</strong></td><td>Structured the data into a hierarchy of 27 data centres and 113 server halls, prepared capacity and utilisation metrics, and built interactive treemap dashboards using Python, Pandas, SQLite and Plotly.</td></tr>
+<tr><td><strong>Result</strong></td><td>The dashboards show projected capacity of 130 MW, actual load of 78 MW and average utilisation of 60%, as well as sales commitments relative to capacity. They help identify high-load areas, underutilised inventory and locations where commercial or operational follow-up is needed.</td></tr>
+</tbody></table></div>
+
+<h3>Why this is a control, not just analytics</h3>
+<p>In a control framework, this dashboard can operate as a <strong>detective management control</strong>. The control objective is to identify capacity pressure, overselling risk or underutilisation early enough for responsible teams to act.</p>
+<div class="sample-control">
+<div class="sample-header"><span class="sample-label">Management control example</span><h3>Monthly capacity and sales monitoring dashboard review</h3><p><strong>Risk:</strong> capacity utilisation, sales commitments or resource allocation may diverge from operational limits and management expectations.</p></div>
+<div class="sample-body">
+<dl>
+<div><dt>Who</dt><dd>Operational analytics owner prepares the dashboard; business and operations managers review exceptions.</dd></div>
+<div><dt>When</dt><dd>Monthly, and additionally when major sales or capacity changes occur.</dd></div>
+<div><dt>What</dt><dd>Review power utilisation, sold capacity, high-load halls, oversold areas and low-utilisation locations.</dd></div>
+<div><dt>If the review passes</dt><dd>Record the dashboard review and retain the report snapshot.</dd></div>
+<div><dt>If it fails</dt><dd>Assign follow-up to the responsible commercial or operational owner, agree action and track resolution.</dd></div>
+<div><dt>Result</dt><dd>A reviewed capacity-control dashboard with documented exceptions and actions.</dd></div>
+<div><dt>Control trace</dt><dd>Dashboard snapshot, exception list, meeting notes, action owner and follow-up status.</dd></div>
+</dl>
+</div>
+</div>
+<div class="matrix-download"><div><strong>Open the interactive dashboard project</strong><p>Explore the full GitHub Pages dashboard with power consumption and sales-risk treemaps.</p></div><a class="button primary" href="https://nevskoii.github.io/monitoring_dashboards_dc/" target="_blank" rel="noopener">Open dashboard project ↗</a></div>
 </section>
-<aside class="risk-references"><strong>Selected references</strong>
-<a href="https://www.mckinsey.com/capabilities/risk-and-resilience/how-we-help-clients/operational-risk-compliance-and-controls" target="_blank" rel="noopener">McKinsey — Operational Risk, Compliance &amp; Controls ↗</a>
-<a href="https://www.mckinsey.com/capabilities/risk-and-resilience/how-we-help-clients/impact-stories/demonstrating-impact-through-the-three-lines-of-defence" target="_blank" rel="noopener">McKinsey — Three lines of defence &amp; control ownership ↗</a>
-<a href="https://www.iso.org/standards/popular/iso-31000-family" target="_blank" rel="noopener">ISO — Risk management (ISO 31000) ↗</a>
-<a href="https://www.iso.org/standard/27001" target="_blank" rel="noopener">ISO — Information security (ISO/IEC 27001) ↗</a>
-<a href="https://www.iso.org/cms/%20render/live/en/sites/isoorg/contents/data/standard/07/51/75106.html" target="_blank" rel="noopener">ISO — Business continuity (ISO 22301) ↗</a>
-<a href="https://www.iso.org/standard/70636.html" target="_blank" rel="noopener">ISO — Service management (ISO/IEC 20000-1) ↗</a>
-<a href="https://uptimeinstitute.com/tier-certification" target="_blank" rel="noopener">Uptime Institute — Tier Standards ↗</a>
-</aside>
+
+<section class="risk-story-section" id="closing-note">
+<h2>The connecting idea</h2>
+<p>The internal control system defines what should be controlled and why. The RCM defines who performs each control, when and with what evidence. Dashboards then strengthen management control by making exceptions visible, repeatable and traceable.</p>
+<p>Together, these elements turn risk management from a static register into an operating discipline: process → risk → control → evidence → action.</p>
+</section>
 </article></main>
 <footer class="footer"><div class="wrap"><a href="../../#areas">← All areas</a> · Aleksandr Korshunov · Melbourne, Australia</div></footer>
 <script>
 (function(){
   const panel=document.getElementById('matrix-excel-download');
+  if(!panel)return;
   const workbook='../../assets/Control_Procedure_Examples.xlsx';
   fetch(workbook,{method:'HEAD',cache:'no-store'})
     .then(response=>{if(response.ok)panel.hidden=false})
