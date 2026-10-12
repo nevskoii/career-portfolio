@@ -22,7 +22,7 @@
   <h2>Notes &amp; projects</h2>
   <div class="grid two">
     <a class="note-link" href="#project-internal-control"><span><strong>01 / Creating an internal control system</strong><small>Risk-oriented control framework: business processes, risks, controls, ownership, evidence and RCM.</small></span><span aria-hidden="true">↓</span></a>
-    <a class="note-link" href="#project-dashboards"><span><strong>02 / Dashboards as a management control procedure</strong><small>STAR-style project note on Power BI / Plotly-style monitoring for power capacity and sales risk.</small></span><span aria-hidden="true">↓</span></a>
+    <a class="note-link" href="#project-dashboards"><span><strong>02 / Dashboards as a management control tool</strong><small>STAR-style project note on monitoring power capacity, sales commitments and management exceptions.</small></span><span aria-hidden="true">↓</span></a>
   </div>
 </section>
 
@@ -113,9 +113,9 @@
 
 <section class="risk-story-section" id="project-dashboards">
 <div class="article-eyebrow">Project 02 · Management control dashboards</div>
-<h2>Dashboards as a control procedure: strengthening management control in business processes</h2>
-<p><strong>A dashboard can be more than reporting. When it has defined thresholds, owners, review cadence and escalation logic, it becomes a detective control that supports management oversight.</strong></p>
-<p>This project translates operational and commercial capacity data into interactive monitoring views for data-centre power consumption and colocation sales risk.</p>
+<h2>Dashboards as a management control tool</h2>
+<p><strong>The dashboard project strengthened management control by turning fragmented operational and commercial data into regular, repeatable reporting for technical and sales teams.</strong></p>
+<p>Instead of manually reviewing separate extracts, managers could see capacity utilisation, power load and sold commitments in one interactive hierarchy — from the data-centre level down to individual server halls.</p>
 
 <div class="grid two">
   <article class="tile"><h3>Power consumption monitoring</h3><p>Actual power load versus projected capacity. The treemap highlights high-load halls, spare capacity and areas requiring operational attention.</p><a href="https://nevskoii.github.io/monitoring_dashboards_dc/heatmap_consumption.html" target="_blank" rel="noopener">Open power treemap ↗</a></article>
@@ -126,28 +126,25 @@
 <div class="tablewrap"><table>
 <thead><tr><th>Element</th><th>Description</th></tr></thead>
 <tbody>
-<tr><td><strong>Situation</strong></td><td>Data-centre capacity and sales information can be difficult to control when it is reviewed through static extracts or disconnected reports. Management needs visibility from portfolio level down to individual server halls.</td></tr>
-<tr><td><strong>Task</strong></td><td>Create an analytical monitoring tool that helps compare available capacity, actual power load and sold commitments, and highlights where business review is required.</td></tr>
-<tr><td><strong>Action</strong></td><td>Structured the data into a hierarchy of 27 data centres and 113 server halls, prepared capacity and utilisation metrics, and built interactive treemap dashboards using Python, Pandas, SQLite and Plotly.</td></tr>
-<tr><td><strong>Result</strong></td><td>The dashboards show projected capacity of 130 MW, actual load of 78 MW and average utilisation of 60%, as well as sales commitments relative to capacity. They help identify high-load areas, underutilised inventory and locations where commercial or operational follow-up is needed.</td></tr>
+<tr><td><strong>Situation</strong></td><td>Capacity, sales and consumption data were difficult to monitor through static extracts and disconnected reports. Technical teams needed visibility over load and spare capacity; sales teams needed a clearer view of sold commitments and commercial inventory.</td></tr>
+<tr><td><strong>Task</strong></td><td>Create a management reporting layer that would reduce manual analytical work, make exceptions visible, and support decisions on capacity allocation, sales commitments and electricity-cost review.</td></tr>
+<tr><td><strong>Action</strong></td><td>Structured data into a hierarchy of 27 data centres and 113 server halls; prepared capacity, utilisation and sales metrics; and built interactive treemap dashboards using Python, Pandas, SQLite and Plotly.</td></tr>
+<tr><td><strong>Result</strong></td><td>The dashboards created a repeatable reporting basis for technical and commercial review: projected capacity of 130 MW, actual load of 78 MW, average utilisation of 60%, and sales commitments relative to capacity. Manual analysis time was reduced by approximately 50%, while capacity pressure, underutilised inventory and potential overselling became easier to identify.</td></tr>
 </tbody></table></div>
 
-<h3>Why this is a control, not just analytics</h3>
-<p>In a control framework, this dashboard can operate as a <strong>detective management control</strong>. The control objective is to identify capacity pressure, overselling risk or underutilisation early enough for responsible teams to act.</p>
-<div class="sample-control">
-<div class="sample-header"><span class="sample-label">Management control example</span><h3>Monthly capacity and sales monitoring dashboard review</h3><p><strong>Risk:</strong> capacity utilisation, sales commitments or resource allocation may diverge from operational limits and management expectations.</p></div>
-<div class="sample-body">
-<dl>
-<div><dt>Who</dt><dd>Operational analytics owner prepares the dashboard; business and operations managers review exceptions.</dd></div>
-<div><dt>When</dt><dd>Monthly, and additionally when major sales or capacity changes occur.</dd></div>
-<div><dt>What</dt><dd>Review power utilisation, sold capacity, high-load halls, oversold areas and low-utilisation locations.</dd></div>
-<div><dt>If the review passes</dt><dd>Record the dashboard review and retain the report snapshot.</dd></div>
-<div><dt>If it fails</dt><dd>Assign follow-up to the responsible commercial or operational owner, agree action and track resolution.</dd></div>
-<div><dt>Result</dt><dd>A reviewed capacity-control dashboard with documented exceptions and actions.</dd></div>
-<div><dt>Control trace</dt><dd>Dashboard snapshot, exception list, meeting notes, action owner and follow-up status.</dd></div>
-</dl>
+<h3>What improved</h3>
+<div class="framework-grid">
+<div><strong>Less manual work</strong><span>Routine capacity and sales analysis moved from scattered extracts to a structured dashboard view, reducing manual preparation and review time.</span></div>
+<div><strong>Regular management reporting</strong><span>Technical and sales teams received a common visual basis for reviewing power load, sold capacity, spare capacity and exceptions.</span></div>
+<div><strong>Capacity allocation control</strong><span>The treemap hierarchy made it easier to see where load was concentrated, where spare capacity remained, and where sales activity needed to be aligned with operational limits.</span></div>
+<div><strong>Electricity-cost review</strong><span>Combining consumption data with contractual and operational context strengthened the review of power charges and helped identify potential overpayments or tariff deviations.</span></div>
+<div><strong>Sales-risk visibility</strong><span>Sold capacity could be compared against physical capacity, making potential overselling or underutilisation visible earlier.</span></div>
+<div><strong>Better evidence for follow-up</strong><span>Dashboard outputs provided a clearer basis for management discussions, exception follow-up and corrective action tracking.</span></div>
 </div>
-</div>
+
+<h3>Why this matters for controls</h3>
+<p>The value of the dashboards is not only analytical. They create a repeatable management-control mechanism: data is consolidated, thresholds are visible, exceptions are highlighted and responsible teams can act on the same evidence base.</p>
+<p>In control terms, the dashboards support a <strong>detective management control</strong>: they do not prevent a capacity issue from arising, but they make deviations visible early enough for commercial and operational owners to review and respond.</p>
 <div class="matrix-download"><div><strong>Open the interactive dashboard project</strong><p>Explore the full GitHub Pages dashboard with power consumption and sales-risk treemaps.</p></div><a class="button primary" href="https://nevskoii.github.io/monitoring_dashboards_dc/" target="_blank" rel="noopener">Open dashboard project ↗</a></div>
 </section>
 
