@@ -113,7 +113,7 @@
 <tr><td>EX-CP-005</td><td>Inventory</td><td>Reconcile warehouse and accounting records</td><td>Detective</td><td>Variance report and approved corrections</td></tr>
 <tr><td>EX-CP-006</td><td>Financial close</td><td>Prevent unauthorised posting to closed periods</td><td>Preventive</td><td>ERP configuration, log and exception approval</td></tr>
 </tbody></table></div>
-<div class="matrix-download"><div><strong>Explore the full control-register structure</strong><p>Six detailed control procedures presented across 27 structured fields: objective, owner, frequency, execution steps, system type, evidence, review and remediation.</p><span>Excel-compatible CSV · 27 structured fields · 6 control examples</span><div class="risk-mapping-link"><a href="../../assets/Risk_Control_Mapping_Examples.csv" download>Download the accompanying risk-to-control mapping (CSV) ↗</a></div></div><a class="button primary" href="../../assets/Control_Procedure_Examples.csv" download>↓ Download RCM example (CSV)</a></div>
+<div class="matrix-download" id="matrix-excel-download" hidden><div><strong>Risk–Control Matrix — Excel workbook</strong><p>Six detailed control procedures across 27 fields, including execution steps, responsibilities, evidence, assessments and follow-up.</p></div><a class="button primary" href="../../assets/Control_Procedure_Examples.xlsx" download>↓ Download Risk–Control Matrix (.xlsx)</a></div>
 
 </section>
 
@@ -133,5 +133,14 @@
 </aside>
 </article></main>
 <footer class="footer"><div class="wrap"><a href="../../#areas">← All areas</a> · Aleksandr Korshunov · Melbourne, Australia</div></footer>
+<script>
+(function(){
+  const panel=document.getElementById('matrix-excel-download');
+  const workbook='../../assets/Control_Procedure_Examples.xlsx';
+  fetch(workbook,{method:'HEAD',cache:'no-store'})
+    .then(response=>{if(response.ok)panel.hidden=false})
+    .catch(()=>{});
+})();
+</script>
 </body>
 </html>
